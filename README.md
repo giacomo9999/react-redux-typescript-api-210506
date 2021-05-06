@@ -5,4 +5,5 @@ To scaffold:
 npx create-react-app my-app --template typescript
 npm install redux react-redux redux-thunk
 npm install -D @types/redux @types/react-redux @types/redux-thunk
+npm i -S redux-devtools-extension
 --delete the node_modules folder and npm i again to reinstall

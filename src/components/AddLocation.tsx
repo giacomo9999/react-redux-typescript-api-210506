@@ -9,8 +9,9 @@ export const AddLocation: React.FC<Props> = ({ saveLocation }) => {
   const addNewLocation = () => {
     return "blah";
   };
+
   return (
-    <form className="Add-new-location" onSubmit={handleLocationData}>
+    <form className="Add-new-location" onSubmit={addNewLocation}>
       <input
         type="text"
         id="locationName"
