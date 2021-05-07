@@ -1,7 +1,9 @@
 import * as actionTypes from "./actionTypes";
 
 export const addLocation = (location: ILocation) => {
+  console.log("addLocation...", location);
   const action: LocationAction = { type: actionTypes.ADD_LOCATION, location };
+  console.log(action);
   return simulateHttpRequest(action);
 };
 

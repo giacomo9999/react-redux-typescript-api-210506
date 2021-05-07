@@ -15,7 +15,10 @@ const App: React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch();
 
   const saveLocation = React.useCallback(
-    (location: ILocation) => dispatch(addLocation(location)),
+    (locationObj: ILocation) => {
+      console.log("saveLocation...", locationObj);
+      return dispatch(addLocation(locationObj));
+    },
     [dispatch]
   );
 

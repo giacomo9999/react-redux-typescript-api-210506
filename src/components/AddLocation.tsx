@@ -7,12 +7,13 @@ export const AddLocation: React.FC<Props> = ({ saveLocation }) => {
   const formRef = React.useRef<HTMLInputElement | null>(null);
 
   const handleLocationChange = (e: React.FormEvent<HTMLInputElement>) => {
-    setLocation({ ...location, [e.currentTarget.id]: e.currentTarget.value });
+    setLocation({ [e.currentTarget.id]: e.currentTarget.value });
   };
 
   const addNewLocation = (e: React.FormEvent) => {
+    console.log("addlocation addNewLocation...", location);
     e.preventDefault();
-    saveLocation(location);
+    saveLocation({ ...location, id: Date.now() });
     if (formRef && formRef.current) {
       formRef.current.value = "";
     }
